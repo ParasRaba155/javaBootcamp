@@ -1,13 +1,13 @@
 package io.tntra.javabootcamp.model;
 
-import Enumpkg.AccountType;
+import io.tntra.javabootcamp.Enumpkg.AccountType;
 
 import java.math.BigDecimal;
 
 public class Account {
     private String ownerName;
     private BigDecimal balance;
-    private AccountType AccType;
+    private AccountType accType;
 
     private BigDecimal minBalance = BigDecimal.valueOf(0);
     private BigDecimal overDraft = BigDecimal.valueOf(0);
@@ -21,10 +21,12 @@ public class Account {
     }
 
     public AccountType getAccType() {
-        return AccType;
+        return this.accType;
     }
 
-
+    public void setAccType(AccountType AccType) {
+        this.accType = AccType;
+    }
 
     public BigDecimal getOverDraft() {
         return overDraft;
@@ -56,7 +58,4 @@ public class Account {
                 +this.getAccType();
     }
 
-    public void setAccType(AccountType accType) {
-        this.AccType = accType;
-    }
 }

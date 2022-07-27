@@ -1,8 +1,7 @@
-package Enumpkg;
+package io.tntra.javabootcamp.Enumpkg;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
-import org.jetbrains.annotations.Contract;
+// import com.fasterxml.jackson.annotation.JsonCreator;
+// import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum AccountType {
     SAVINGS("Savings"),

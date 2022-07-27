@@ -3,7 +3,6 @@ package io.tntra.javabootcamp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -14,9 +13,8 @@ public class JavaBootcampApplication {
     }
 
     @GetMapping("/")
-    public String HelloWorld(){
+    public String homePage(){
         return "Hello Welcome to the Java Bootcamp Bank app";
     }
 
 }
-
