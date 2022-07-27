@@ -1,5 +1,6 @@
 package io.tntra.javabootcamp.services;
 
+import io.tntra.javabootcamp.Enumpkg.AccountType;
 import io.tntra.javabootcamp.Exceptionpkg.InsufficientBalanceException;
 import io.tntra.javabootcamp.Exceptionpkg.InvalidOwnerException;
 import io.tntra.javabootcamp.Exceptionpkg.MinBalanceException;
@@ -58,7 +59,9 @@ public class ICICIService extends AccountServiceImpl implements AccountService {
 
     @Override
     public boolean checkBalance(Account account, BigDecimal amt){
-        account.setOverDraft(account.getBalance().multiply(BigDecimal.valueOf(0.1)));
+        if(account.getAccType() == AccountType.CURRENT){
+            account.setOverDraft(account.getBalance().multiply(BigDecimal.valueOf(0.1)));
+        }
         return super.checkBalance(account,amt);
     }
 }
